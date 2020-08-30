@@ -102,7 +102,7 @@ async def update_load_balancer_service(request):
                                                                        RLBU_PROJECT_PATH_SLUG,
                                                                        os.getenv('ENV_DOMAIN')),
                                          "sourcePort": int(os.getenv('EXTERNAL_PORT', 80)),
-                                         "targetPort": int(os.getenv('INTERNAL_PORT', 80)),
+                                         "targetPort": int(os.getenv('INTERNAL_PORT', 8080)),
                                          "serviceId": request.match_dict['service_id']}
                                         ]
                           }
